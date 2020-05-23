@@ -1,3 +1,5 @@
+tcsh test.txt
+
 3dLMEr -prefix LME.nii -jobs 2 -dbgArgs \
 -model  'Mean_FD+Edu+Diagnosis*Age*Sex+(1|Site)' \
 #-mask GroupMask_90percent.nii \
