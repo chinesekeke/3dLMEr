@@ -1,5 +1,5 @@
 3dLMEr -prefix LME.nii -jobs 2 -dbgArgs \
--model  'Mean_FD+Edu+Diagnosis+Age+Sex+Diagnosis:Age:Sex+(1|Site)' \
+-model  'Mean_FD+Edu+Diagnosis*Age*Sex+(1|Site)' \
 -mask GroupMask_90percent.nii \
 -qVars  'Mean_FD,Edu,Age' \
 -gltCode MDDvsHC  'Diagnosis : 1*MDD -1*HC' \
