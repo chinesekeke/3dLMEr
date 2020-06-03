@@ -9,6 +9,4 @@
 -gltCode DiagBySex  'Diagnosis : 1*MDD -1*HC Sex : 1*female -1*male' \
 -gltCode Female-MDDvsHC  'Diagnosis : 1*MDD -1*HC Sex : 1*female' \
 -gltCode Male-MDDvsHC  'Diagnosis : 1*MDD -1*HC Sex : 1*male' \
--gltCode MDD-FemalevsMale  'Diagnosis : 1*MDD Sex : 1*female -1*male' \
--gltCode HC-FemalevsMale  'Diagnosis : 1*HC Sex : 1*female -1*male' \
 -dataTable @table.txt
