@@ -1,13 +1,10 @@
-tcsh test.txt
-
-3dLMEr -prefix LME.nii -jobs 2 -dbgArgs \
--model  'Mean_FD+Edu+Diagnosis*Age*Sex+(1|Site)' \
--mask GroupMask_90percent.nii \
--qVars  'Mean_FD,Edu,Age' \
--gltCode MDD      'Diagnosis : 1*MDD' \
--gltCode HC      'Diagnosis : 1*HC' \
--gltCode MDD-HC  'Diagnosis : 1*MDD -1*HC' \
--gltCode DiagByAge  'Diagnosis : 1*MDD -1*HC Age :' \
--gltCode DiagBySex  'Diagnosis : 1*MDD -1*HC Sex : 1*female -1*male' \
--gltCode DiagBySexByAge  'Diagnosis : 1*MDD -1*HC Sex : 1*female -1*male Age :' \
--dataTable @table.txt
+3dLMEr -prefix LME2.nii -jobs 2 -dbgArgs \
+-model  'HAMD+Duration+Episode+Medication+Mean_FD+Edu+Age+Sex+(1|Site)' \
+-mask Clust_DiagEffect0.05_40_mask+tlrc \
+-qVars  'Mean_FD,Edu,Age,HAMD,Duration' \
+-gltCode FED-MDDvsFEDN-MDD  'Medication : 1*Drug -1*DrugNaive Episode : 1*FE' \
+-gltCode 276HAMD      'Medication : 1*DrugNaive HAMD :' \
+-gltCode 276Duration      'Medication : 1*DrugNaive Duration :' \
+-gltCode 809HAMD      'HAMD :' \
+-gltCode 809Duration      'Duration :' \
+-dataTable @table2.txt
