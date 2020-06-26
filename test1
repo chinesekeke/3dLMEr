@@ -1,11 +1,16 @@
-3dLMEr -prefix LME.nii -jobs 2 -dbgArgs \
+3dLMEr -prefix LME1.nii -jobs 2 -dbgArgs \
 -model  'Mean_FD+Edu+Diagnosis*Age*Sex+(1|Site)' \
 -mask GroupMask_90percent.nii \
 -qVars  'Mean_FD,Edu,Age' \
+-gltCode HC  'Diagnosis : 1*HC' \
+-gltCode MDD  'Diagnosis : 1*MDD' \
 -gltCode MDDvsHC  'Diagnosis : 1*MDD -1*HC' \
 -gltCode DiagBySex  'Diagnosis : 1*MDD -1*HC Sex : 1*female -1*male' \
 -gltCode Female-MDDvsHC  'Diagnosis : 1*MDD -1*HC Sex : 1*female' \
 -gltCode Male-MDDvsHC  'Diagnosis : 1*MDD -1*HC Sex : 1*male' \
+-gltCode DiagByAge      'Diagnosis : 1*MDD -1*HC Age :' \
+-gltCode HCAge      'Diagnosis : 1*HC Age :' \
+-gltCode MDDAge      'Diagnosis : 1*MDD Age :' \
 -gltCode DiagBySexByAge  'Diagnosis : 1*MDD -1*HC Sex : 1*female -1*male Age :' \
 -gltCode Female-DiagByAge      'Diagnosis : 1*MDD -1*HC Sex : 1*female Age :' \
 -gltCode Male-DiagByAge      'Diagnosis : 1*MDD -1*HC Sex : 1*male Age :' \
