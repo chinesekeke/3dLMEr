@@ -1,10 +1,10 @@
-3dLMEr -prefix LME2.nii -jobs 2 -dbgArgs \
+3dLMEr -prefix LME6.nii -jobs 2 -dbgArgs \
 -model  'HAMD+Duration+Episode+Medication+Mean_FD+Edu+Age+Sex+(1|Site)' \
 -mask Clust_DiagEffect0.05_40_mask+tlrc \
 -qVars  'Mean_FD,Edu,Age,HAMD,Duration' \
--gltCode FED-MDDvsFEDN-MDD  'Medication : 1*Drug -1*DrugNaive Episode : 1*FE' \
--gltCode 276HAMD      'Medication : 1*DrugNaive HAMD :' \
--gltCode 276Duration      'Medication : 1*DrugNaive Duration :' \
--gltCode 809HAMD      'HAMD :' \
--gltCode 809Duration      'Duration :' \
--dataTable @table2.txt
+-gltCode FEDvsFEDN  'Medication : 1*Drug -1*DrugNaive Episode : 1*FE' \
+-gltCode Episode      'Episode : 1*Reccurent -1*FE Medication : 1*DrugNaive' \
+-gltCode S20-FEDvsFEDN      'Medication : 1*Drug -1*DrugNaive Episode : 1*FE Site : 1*S20' \
+-gltCode HAMD      'HAMD :' \
+-gltCode Duration      'Duration :' \
+-dataTable @table3.txt
