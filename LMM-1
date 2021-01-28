@@ -1,4 +1,4 @@
-3dLMEr -prefix LME1.nii -jobs 2 -dbgArgs \
+3dLMEr -prefix LMM1.nii -jobs 2 -dbgArgs \
 -model  'Mean_FD+Edu+Diagnosis*Age*Sex+(1|Site)' \
 -mask GroupMask_90percent.nii \
 -qVars  'Mean_FD,Edu,Age' \
