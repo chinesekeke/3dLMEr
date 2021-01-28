@@ -16,4 +16,4 @@
 -gltCode Male-DiagByAge      'Diagnosis : 1*MDD -1*HC Sex : 1*male Age :' \
 -gltCode Male-MDDAge      'Diagnosis : 1*MDD Sex : 1*male Age :' \
 -gltCode Male-HCAge      'Diagnosis : 1*HC Sex : 1*male Age :' \
--dataTable @table.txt
+-dataTable @table1.txt
