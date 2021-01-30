@@ -1,2 +1,2 @@
-# 3dLMEr
+# 3dLMMr
 voxel-based LME for fMRI data
